@@ -1,33 +1,29 @@
 package sk.stuba.fei.uim.oop;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("hi");
-        JFrame frame = new JFrame("Sak teda ako chlap ne");
 
-        //JButton button =new JButton("Aby ta roztrhalo");
-        //JLabel label = new JLabel("kokotek");
-        // .setBounds(150,60,200,40);
-        //button.setBounds(100,100,200, 40);
-        //frame.add(button);
-        //frame.add(label);
+        JFrame okno = new JFrame();
+        okno.setVisible(true);
+        okno.setSize(300, 300);
+        okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        okno.setLayout(new GridLayout(3,4));
+        //JLabel label = new JLabel("Hello world");
+        //okno.add(label);
 
-        frame.setSize(350, 200);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        for (int i = 0; i < 11; i++) {
 
-        JPanel panel = new JPanel();
-        frame.add(panel);
+            if(i == 0){
+                okno.add(new Dvere());
+            }
+            else
+                okno.add(new MyPanel());
 
-        Place place = new Place();
-
-        place.placeComponents(panel);
-
-
-        frame.setVisible(true);
+        }
     }
-
-
 }
+
