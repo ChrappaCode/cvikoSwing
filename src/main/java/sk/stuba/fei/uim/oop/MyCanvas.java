@@ -6,7 +6,7 @@ public class MyCanvas extends Canvas {
 
     public MyCanvas() {
 
-        setBackground(Color.yellow);
+        setBackground(Color.green);
 
     }
 
@@ -26,8 +26,15 @@ public class MyCanvas extends Canvas {
         //run fractal algorithm to draw 2 circles to the left and right
         drawCircles(g, xMid, yMid, radius);*/
 
-        myStar(g);
-        myStar2(g);
+        /*myStar(g);
+        myStar2(g);*/
+
+        gula1(g);
+        gula2(g);
+        gula3(g);
+        gula4(g);
+        gula5(g);
+        ciarka1(g);
     }
 
     public void myStar(Graphics g)
@@ -50,6 +57,43 @@ public class MyCanvas extends Canvas {
         g.fillPolygon(new int[] {240, 240, 310}, new int[] {200, 240, 220}, 3);
         g.fillPolygon(new int[] {200, 240, 220}, new int[] {240, 240, 310}, 3);
         g.fillPolygon(new int[] {200, 200, 130}, new int[] {200, 240, 220}, 3);
+    }
+
+    public void gula1(Graphics g)
+    {
+        g.setColor(Color.cyan);
+        g.fillArc(150,150,100,100,0,360);
+
+    }
+    public void gula2(Graphics g)
+    {
+        g.setColor(Color.magenta);
+        g.fillArc(150,250,100,100,0,360);
+
+    }
+    public void gula3(Graphics g)
+    {
+        g.setColor(Color.orange);
+        g.fillArc(250,150,100,100,0,360);
+
+    }
+    public void gula4(Graphics g)
+    {
+        g.setColor(Color.red);
+        g.fillArc(250,250,100,100,0,360);
+
+    }
+    public void gula5(Graphics g)
+    {
+        g.setColor(Color.black);
+        g.fillArc(230,230,45,45,0,360);
+
+    }
+    public void ciarka1(Graphics g)
+    {
+        g.setColor(Color.BLUE);
+        g.drawLine(250,250,500,250);
+
     }
 
     void drawCircles (Graphics graphics, int xMid, int yMid, int radius)
